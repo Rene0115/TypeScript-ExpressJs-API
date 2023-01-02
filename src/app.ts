@@ -10,7 +10,6 @@ dotenv.config();
 const app = express();
 const logger = pino();
 
-
 middleware(app);
 
 let port = process.env.PORT || 3000;

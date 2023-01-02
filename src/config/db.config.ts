@@ -1,10 +1,15 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import logger from '../app';
 
 dotenv.config();
-const uri = process.env.MONGODB_URI || 'mongodb+srv://RENE:password1234@cluster0.jpnvvoz.mongodb.net/typescript_API?retryWrites=true&w=majority';
+const uri = process.env.DATABASE_URI || '';
 const database = () => {
-  mongoose.connect(uri).then((value) => console.log('database connected')).catch((err) => console.log(err));
+  mongoose.connect(uri).
+  then((value) => 
+  logger.info('database connected'))
+  .catch((err) =>
+   logger.error(err));
 };
 
 export default database;
