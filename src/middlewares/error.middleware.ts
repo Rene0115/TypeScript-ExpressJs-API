@@ -1,6 +1,6 @@
-import { NextFunction } from 'express';
 import pino from 'pino';
 import express from 'express';
+import { NextFunction } from 'express';
 
 const logger = pino();
 
