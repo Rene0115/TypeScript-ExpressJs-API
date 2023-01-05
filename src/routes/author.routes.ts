@@ -5,4 +5,5 @@ const authorRouter = express.Router();
 
 authorRouter.post("/create", authorController.create);
 authorRouter.get("/read", authorController.read);
+authorRouter.patch("/updatename", authorController.update);
 export default authorRouter;
